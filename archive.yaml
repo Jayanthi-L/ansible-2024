@@ -1,0 +1,8 @@
+---
+- name: This playbook for archive zip/tar
+  hosts: localhost
+  tasks:
+  - name: archive's folder to zip/tar
+    archive:
+      path: /home/ubuntu/playbooks/apache-tomcat-8.5.99.zip
+      dest: /home/ubuntu/playbooks/apache-tomcat-8.5.99

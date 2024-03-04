@@ -1,0 +1,8 @@
+---
+- name: This play is used to install tree software
+  hosts: localhost
+  tasks:
+  - name: tree software installation
+    apt:
+      name: tree
+      state: latest

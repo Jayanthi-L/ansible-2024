@@ -1,0 +1,8 @@
+---
+- name: this plybook for download from internet
+  hosts: localhost
+  tasks:
+  - name:
+    get_url:
+     url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.zip
+     dest: /home/ubuntu/playbooks

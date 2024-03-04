@@ -1,0 +1,8 @@
+---
+- name: folder or directory creation with ansible-playbook
+  hosts: localhost
+  tasks:
+  - name: folder creation
+    file:
+      path: /home/ubuntu/playbooks/folder_one
+      state: absent
