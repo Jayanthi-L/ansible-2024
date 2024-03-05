@@ -1,0 +1,10 @@
+---
+- name: this playbook for crearing files on remote machines
+  hosts: all
+  vars:
+  - state: touch
+  tasks:
+  - name: creating file
+    file:
+      path: /home/ubuntu/a.txt
+      state: "{{ state }}"

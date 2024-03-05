@@ -1,11 +1,26 @@
 ---
 - name: this playbook is install tools in remote servers
-  hosts: server1
+  hosts: dev
   become: true
+  vars:
+  - package_one: tree
+  - package_two: zip
+  - package_three: wget
+  - state_one: present
+  - state_two: present
+  - state_three: present
   tasks:
-  - name: installing tree
+  - name: tool one
     apt:
-      name: tree
-      state: present
+      name: '{{ package_one }}'
+      state: '{{ state_one }}'
+  - name: tool two
+    apt:
+     name: "{{ package_two }}"
+     state: "{{ state_two }}"
+  - name: tool three
+    apt:
+      name: "{{ package_three }}"
+      state: "{{ state_three }}"
       update_cache: yes
 
