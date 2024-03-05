@@ -1,0 +1,12 @@
+---
+- name: installing tools using WITH ITEMS
+  hosts: localhost
+  tasks:
+  - name: install tools
+    apt: 
+      name: "{{ item }}"
+      state: present
+    with_items:
+    - wget
+    - zip
+    - tree

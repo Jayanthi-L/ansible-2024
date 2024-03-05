@@ -1,0 +1,20 @@
+---
+- name: using handlers notify
+  hosts: localhost
+  tasks:
+  - name: installing nginx
+    apt:
+      name: nginx
+      state: present
+      update_cache: yes
+    notify: nginx start
+  - name: installing curl
+    apt:
+      name: curl
+      state: present
+    notify: nginx start
+  handlers:
+  - name: nginx start
+    service:
+      name: nginx
+      state: nginx started 
