@@ -1,0 +1,8 @@
+---
+- name: this playbook for user creation
+  hosts: localhost
+  tasks:
+  - name: users creation
+    user: 
+      name: user1
+      state: present

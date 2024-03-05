@@ -1,0 +1,11 @@
+---
+- name: this playbook is install tools in remote servers
+  hosts: server1
+  become: true
+  tasks:
+  - name: installing tree
+    apt:
+      name: tree
+      state: present
+      update_cache: yes
+

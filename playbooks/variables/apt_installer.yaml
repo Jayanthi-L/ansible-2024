@@ -1,0 +1,23 @@
+---
+- name: this playbook for install installing tools/softwares
+  hosts: localhost
+  vars:
+  - package_one: zip
+  - state_one: present
+  - package_two: tree
+  - state_two: present
+  - package_three: wget
+  - state_three: present
+  tasks:
+  - name: apt installer one
+    apt:
+      name: "{{ package_one }}"
+      state: "{{ state_one}}"
+  - name: apt installer two
+    apt:
+      name: "{{ package_two }}"
+      state: "{{ state_two }}"
+  - name: apt installer three
+    apt:
+      name: "{{ package_three }}"
+      state: "{{ state_three }}"

@@ -1,0 +1,9 @@
+---
+- name: this playbook for replacing string in a file
+  hosts: localhost
+  tasks:
+  - name: replacing string
+    replace:
+      path: /home/ubuntu/a.txt
+      regexp: friend
+      replace: world

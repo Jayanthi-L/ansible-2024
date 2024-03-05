@@ -1,0 +1,8 @@
+---
+- name: this playbook for copy a file one location to another location
+  hosts: localhost
+  tasks: 
+  - name: coping files
+    copy:
+      src: /home/ubuntu/a.txt
+      dest: /home/ubuntu/ansible-2024/playbooks

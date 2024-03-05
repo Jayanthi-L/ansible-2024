@@ -1,0 +1,8 @@
+---
+- name: this playbook for services  started  stopped  reloaded  restarted
+  hosts: localhsot
+  tasks:
+  - name: services 
+     service:
+     - name: tomcat
+       state: started       

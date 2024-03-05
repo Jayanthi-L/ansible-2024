@@ -1,0 +1,8 @@
+---
+- name: add  lines into a file
+  hosts: localhost
+  tasks:
+  - name: lines adding
+    lineinfile:
+      path: /home/ubuntu/a.txt
+      line: Hello my friend
