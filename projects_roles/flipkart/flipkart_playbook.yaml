@@ -1,0 +1,8 @@
+---
+- name: amazon playbook
+  hosts: localhost
+  become: yes
+  roles: 
+  - tree
+  - zip
+  - apache2
